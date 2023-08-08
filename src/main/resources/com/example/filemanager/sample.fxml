@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml" fx:controller="com.example.filemanager.Controller">
+    <MenuBar>
+        <Menu text="Файл">
+            <MenuItem text="Выйти из программы" onAction="#menuItemExit"/>
+        </Menu>
+    </MenuBar>
+    <HBox VBox.vgrow="ALWAYS">
+        <fx:include fx:id="leftPanel" source="panel.fxml" HBox.hgrow="ALWAYS"/>
+        <fx:include fx:id="rightPanel" source="panel.fxml" HBox.hgrow="ALWAYS"/>
+    </HBox>
+    <HBox spacing="5.0">
+        <Button text="Просмотреть" focusTraversable="false" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+        <Button text="Копировать" focusTraversable="false" HBox.hgrow="ALWAYS" maxWidth="Infinity" onAction="#copyBtnAction"/>
+        <Button text="Переместить" focusTraversable="false" HBox.hgrow="ALWAYS" maxWidth="Infinity"/>
+        <Button text="Удалить" focusTraversable="false" HBox.hgrow="ALWAYS" maxWidth="Infinity" onAction="#deleteBtnAction"/>
+        <Button text="Выйти из программы" focusTraversable="false" HBox.hgrow="ALWAYS" maxWidth="Infinity" onAction="#exitBtnAction"/>
+        <padding>
+            <Insets bottom="5.0" left="5.0" right="5.0" top="5.0"/>
+        </padding>
+    </HBox>
+
+</VBox>
